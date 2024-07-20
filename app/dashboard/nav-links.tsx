@@ -9,7 +9,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
-export default function NavLinks() {
+export default function NavLinks(props: { links: Record<string, any>[] }) {
+    const { links } = props
     const pathname = usePathname();
     return (
         <>
